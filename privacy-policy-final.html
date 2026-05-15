@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — The Creative Well</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FAFAF8;
+  --ink:#0E0C0A;
+  --gold:#C8A96A;
+  --mid:#8A8884;
+  --light:#E2E0DC;
+  --lighter:#F0EEEA;
+  --glass:rgba(255,255,255,0.10);
+  --glass-border:rgba(255,255,255,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#080C09;
+  color:rgba(255,255,255,0.75);
+  font-family:'Josefin Sans',sans-serif;
+  font-size:14px;
+  line-height:1.9;
+  font-weight:200;
+  letter-spacing:.04em;
+}
+
+/* ── NAV ── */
+.glass-nav{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:1.5rem 3.5rem;
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  background:rgba(10,15,12,0.4);
+  border-bottom:0.5px solid rgba(255,255,255,.08);
+  position:sticky;top:0;z-index:100;
+}
+.nav-brand{
+  text-align:center;
+  font-size:.82rem;
+  font-weight:200;
+  letter-spacing:.55em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+.nav-back{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  text-decoration:none;
+  transition:color .2s;
+  display:flex;align-items:center;gap:.5rem;
+}
+.nav-back:hover{color:rgba(255,255,255,.7)}
+.nav-right{
+  display:flex;justify-content:flex-end;
+}
+.nav-right a{
+  font-size:.58rem;font-weight:200;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;
+}
+.nav-right a:hover{color:rgba(255,255,255,.7)}
+
+/* ── HERO ── */
+.page-hero{
+  position:relative;
+  padding:5rem 3.5rem 4rem;
+  border-bottom:0.5px solid rgba(255,255,255,.06);
+  overflow:hidden;
+}
+.page-hero::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 20% 50%,rgba(26,55,38,0.5) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 60% at 80% 30%,rgba(200,169,106,0.06) 0%,transparent 60%);
+  pointer-events:none;
+}
+.page-eyebrow{
+  font-size:.58rem;font-weight:200;
+  letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.25rem;
+  display:flex;align-items:center;gap:.75rem;
+  position:relative;
+}
+.page-eyebrow::before{content:'';display:block;width:28px;height:.5px;background:var(--gold)}
+.page-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:300;font-style:italic;
+  color:#fff;line-height:1.1;
+  margin-bottom:1rem;
+  position:relative;
+}
+.page-updated{
+  font-size:.58rem;font-weight:200;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.25);
+  position:relative;
+}
+
+/* ── CONTENT ── */
+.content-wrap{
+  max-width:760px;
+  margin:0 auto;
+  padding:4rem 3.5rem 6rem;
+}
+
+/* Glass intro box */
+.intro-box{
+  backdrop-filter:blur(20px) saturate(1.4);
+  -webkit-backdrop-filter:blur(20px) saturate(1.4);
+  background:var(--glass);
+  border:0.5px solid var(--glass-border);
+  border-radius:6px;
+  padding:2rem 2.25rem;
+  margin-bottom:3rem;
+  position:relative;overflow:hidden;
+}
+.intro-box::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);
+}
+.intro-box p{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:1.05rem;font-weight:300;
+  color:rgba(255,255,255,.7);line-height:1.7;
+}
+
+/* Sections */
+.policy-section{margin-bottom:3rem}
+.policy-section:last-child{margin-bottom:0}
+
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;font-weight:400;
+  color:rgba(255,255,255,.9);
+  margin-bottom:1rem;
+  padding-bottom:.75rem;
+  border-bottom:0.5px solid rgba(255,255,255,.07);
+  display:flex;align-items:center;gap:.75rem;
+}
+h2::before{
+  content:'';display:block;
+  width:18px;height:.5px;
+  background:var(--gold);flex-shrink:0;
+}
+
+p{
+  color:rgba(255,255,255,.5);
+  margin-bottom:1rem;
+  line-height:1.9;
+  font-weight:200;
+  letter-spacing:.04em;
+}
+p:last-child{margin-bottom:0}
+
+/* Amazon highlight box */
+.amazon-box{
+  background:rgba(200,169,106,0.07);
+  border:0.5px solid rgba(200,169,106,0.25);
+  border-radius:4px;
+  padding:1.5rem 1.75rem;
+  margin:1.5rem 0;
+}
+.amazon-box-label{
+  font-size:.55rem;font-weight:300;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.75rem;
+}
+.amazon-box p{
+  color:rgba(255,255,255,.55);
+  font-size:.82rem;
+  line-height:1.85;
+  margin:0;
+}
+
+ul{
+  margin:.5rem 0 1rem 0;
+  padding-left:1.25rem;
+  color:rgba(255,255,255,.45);
+}
+ul li{
+  margin-bottom:.5rem;
+  font-size:.85rem;
+  line-height:1.7;
+  font-weight:200;
+  letter-spacing:.04em;
+}
+
+a{
+  color:var(--gold);
+  text-decoration:none;
+  border-bottom:0.5px solid rgba(200,169,106,0.3);
+  transition:border-color .2s;
+}
+a:hover{border-color:var(--gold)}
+
+.contact-box{
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.05);
+  border:0.5px solid rgba(255,255,255,.1);
+  border-radius:4px;
+  padding:1.5rem 1.75rem;
+  margin-top:1.25rem;
+}
+.contact-box p{margin:0;color:rgba(255,255,255,.45);font-size:.82rem}
+
+/* ── FOOTER ── */
+footer{
+  background:#050806;
+  padding:2rem 3.5rem;
+  border-top:0.5px solid rgba(255,255,255,.05);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.footer-logo{
+  font-size:.72rem;font-weight:200;
+  letter-spacing:.45em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  text-decoration:none;
+}
+.footer-copy{
+  font-size:.52rem;font-weight:200;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.15);
+}
+.footer-nav{display:flex;gap:1.5rem}
+.footer-nav a{
+  font-size:.55rem;font-weight:200;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.2);
+  text-decoration:none;border:none;
+  transition:color .2s;
+}
+.footer-nav a:hover{color:rgba(255,255,255,.55)}
+
+@media(max-width:768px){
+  .glass-nav{padding:1.25rem 1.5rem}
+  .page-hero{padding:3.5rem 1.5rem 3rem}
+  .content-wrap{padding:2.5rem 1.5rem 4rem}
+  footer{padding:1.5rem}
+  .footer-nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="glass-nav">
+  <a href="index.html" class="nav-back">← Back to Home</a>
+  <a href="index.html" class="nav-brand">The Creative Well</a>
+  <div class="nav-right"><a href="#contact">Contact</a></div>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-updated">Last updated: January 1, 2025 &nbsp;·&nbsp; Effective immediately</p>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <div class="intro-box">
+    <p>Your privacy matters here. This policy explains clearly and honestly what information The Creative Well collects, how it is used, and what choices you have. Nothing is buried in fine print.</p>
+  </div>
+
+  <!-- 1. WHO WE ARE -->
+  <div class="policy-section">
+    <h2>Who We Are</h2>
+    <p>The Creative Well is an independent wellness and lifestyle publication focused on health, natural supplements, and sustainable income strategies for creative people. This website is operated by an independent publisher based in the United States.</p>
+    <p>For any privacy-related questions, you may contact us using the information provided at the bottom of this page.</p>
+  </div>
+
+  <!-- 2. AMAZON AFFILIATE DISCLOSURE -->
+  <div class="policy-section">
+    <h2>Amazon Affiliate Disclosure</h2>
+    <div class="amazon-box">
+      <div class="amazon-box-label">Required FTC & Amazon Associates Disclosure</div>
+      <p>The Creative Well is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases. This means that when you click a product link on this site and make a purchase on Amazon, we may receive a small commission — at no additional cost to you whatsoever.</p>
+    </div>
+    <p>We only recommend products we genuinely believe in. Affiliate commissions never influence editorial decisions or the honesty of our content. Our recommendations reflect real knowledge and personal experience with the products and categories we cover.</p>
+  </div>
+
+  <!-- 3. INFORMATION WE COLLECT -->
+  <div class="policy-section">
+    <h2>Information We Collect</h2>
+    <p>We collect only what is necessary to operate this site and deliver the newsletter. Specifically:</p>
+    <ul>
+      <li><strong style="color:rgba(255,255,255,.6);font-weight:300">Email address and name</strong> — when you voluntarily subscribe to The Creative Well newsletter.</li>
+      <li><strong style="color:rgba(255,255,255,.6);font-weight:300">Usage data</strong> — standard analytics information such as pages visited, time on site, referring pages, and browser type. This data is aggregated and not personally identifiable.</li>
+      <li><strong style="color:rgba(255,255,255,.6);font-weight:300">Cookies</strong> — small files placed on your browser by this site and third-party services (including Amazon) to enable functionality, track affiliate referrals, and analyze traffic.</li>
+    </ul>
+    <p>We do not collect payment information, social security numbers, or any other sensitive personal data. We do not sell your information to anyone, ever.</p>
+  </div>
+
+  <!-- 4. HOW WE USE YOUR INFORMATION -->
+  <div class="policy-section">
+    <h2>How We Use Your Information</h2>
+    <p>Information collected on this site is used exclusively for the following purposes:</p>
+    <ul>
+      <li>Sending the weekly Creative Well newsletter to subscribers who have opted in</li>
+      <li>Understanding which content is most useful to our readers through anonymous analytics</li>
+      <li>Tracking affiliate link performance to understand which product recommendations resonate</li>
+      <li>Improving site content, structure, and user experience over time</li>
+    </ul>
+    <p>We will never use your email address to send unsolicited commercial messages unrelated to The Creative Well, and we will never share your email address with third parties for their own marketing purposes.</p>
+  </div>
+
+  <!-- 5. COOKIES -->
+  <div class="policy-section">
+    <h2>Cookies & Tracking</h2>
+    <p>This site uses cookies to function properly and to support our affiliate partnerships. Cookies used on this site include:</p>
+    <ul>
+      <li><strong style="color:rgba(255,255,255,.6);font-weight:300">Analytics cookies</strong> — to understand how visitors use the site (e.g., Google Analytics). Data collected is anonymous.</li>
+      <li><strong style="color:rgba(255,255,255,.6);font-weight:300">Amazon affiliate cookies</strong> — when you click an Amazon link from this site, Amazon places a cookie in your browser that attributes any resulting purchase to our affiliate account. This cookie typically lasts 24 hours.</li>
+      <li><strong style="color:rgba(255,255,255,.6);font-weight:300">Functional cookies</strong> — small files that help the site remember your preferences during a session.</li>
+    </ul>
+    <p>You may disable cookies in your browser settings at any time. Note that doing so may affect site functionality and will prevent affiliate tracking — though this has no impact on your purchase price.</p>
+  </div>
+
+  <!-- 6. THIRD PARTY LINKS -->
+  <div class="policy-section">
+    <h2>Third-Party Links & Services</h2>
+    <p>This site contains links to external websites and platforms — including Amazon.com, newsletter platforms, and other resources we recommend. Once you leave The Creative Well, this Privacy Policy no longer applies. We encourage you to read the privacy policies of any external sites you visit.</p>
+    <p>We are not responsible for the privacy practices or content of third-party websites, including Amazon.com.</p>
+  </div>
+
+  <!-- 7. NEWSLETTER -->
+  <div class="policy-section">
+    <h2>Newsletter & Email Communications</h2>
+    <p>If you subscribe to The Creative Well newsletter, your name and email address are stored securely through our email service provider. You may unsubscribe at any time by clicking the unsubscribe link in any email we send — no questions asked, and your data will be removed promptly.</p>
+    <p>We do not use third-party marketing platforms to re-target you with ads based on your email subscription.</p>
+  </div>
+
+  <!-- 8. YOUR RIGHTS -->
+  <div class="policy-section">
+    <h2>Your Rights & Choices</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request a copy of any personal information we hold about you</li>
+      <li>Request deletion of your personal data from our systems</li>
+      <li>Unsubscribe from email communications at any time</li>
+      <li>Opt out of analytics tracking by using browser privacy settings or extensions</li>
+    </ul>
+    <p>To exercise any of these rights, contact us directly using the information below. We will respond within 30 days.</p>
+  </div>
+
+  <!-- 9. CHILDREN -->
+  <div class="policy-section">
+    <h2>Children's Privacy</h2>
+    <p>The Creative Well is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has submitted personal information to this site, please contact us and we will remove it immediately.</p>
+  </div>
+
+  <!-- 10. CHANGES -->
+  <div class="policy-section">
+    <h2>Changes to This Policy</h2>
+    <p>This Privacy Policy may be updated periodically to reflect changes in our practices or applicable law. When material changes are made, the "Last Updated" date at the top of this page will be revised. Continued use of the site following any changes constitutes acceptance of the updated policy.</p>
+    <p>We recommend checking this page occasionally if privacy matters are important to you — which, if you're here, they probably are.</p>
+  </div>
+
+  <!-- 11. CONTACT -->
+  <div class="policy-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how your information is handled, please reach out:</p>
+    <div class="contact-box">
+      <p>
+        <strong style="color:rgba(255,255,255,.6);font-weight:300;display:block;margin-bottom:.5rem">The Creative Well</strong>
+        Email: <a href="mailto:blisteringvictory@gmail.com">blisteringvictory@gmail.com</a><br>
+        Website: <a href="index.html">thecreativewell.com</a><br><br>
+        
+      </p>
+    </div>
+  </div>
+
+</div><!-- end content-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">The 

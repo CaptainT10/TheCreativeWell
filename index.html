@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Creative Well — wellness habits, natural supplements, and income strategies for the Creative Sovereign playing the long game.">
+<meta property="og:title" content="The Creative Well — Wellness for Creative Sovereigns">
+<meta property="og:description" content="Natural wellness, plant-based supplements, and sustainable income strategies. One honest recommendation at a time.">
+<meta property="og:url" content="https://thecreativewell.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Creative Well">
+<meta name="twitter:description" content="Wellness habits and income strategies for the Creative Sovereign.">
+<title>The Creative Well — Wellness for Creative Sovereigns</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --glass:       rgba(255,255,255,0.10);
+  --glass-mid:   rgba(255,255,255,0.07);
+  --glass-heavy: rgba(255,255,255,0.18);
+  --glass-border:rgba(255,255,255,0.20);
+  --glass-shine: rgba(255,255,255,0.35);
+  --cream:  #F8F4EC;
+  --white:  #FFFFFF;
+  --ink:    #0E0C0A;
+  --gold:   #C8A96A;
+  --gold2:  #E2C88A;
+  --mist:   rgba(255,255,255,0.55);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#0A0D0E;
+  color:var(--white);
+  font-family:'Josefin Sans',sans-serif;
+  overflow-x:hidden;
+}
+::selection{background:rgba(200,169,106,.4);color:#fff}
+
+/* ── HERO SECTION ── */
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+/* Rich layered photographic background */
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(34,75,48,0.9) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 80% at 20% 60%, rgba(12,30,22,0.95) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 70% at 50% 100%, rgba(8,12,10,1) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 10%, rgba(180,140,60,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 15% 20%, rgba(60,100,70,0.4) 0%, transparent 55%),
+    linear-gradient(170deg, #0D1A12 0%, #0A1510 40%, #060D08 100%);
+  z-index:0;
+}
+/* Light shaft */
+.hero-bg::before{
+  content:'';
+  position:absolute;
+  top:-20%;left:55%;
+  width:300px;height:120%;
+  background:linear-gradient(180deg,rgba(200,169,106,0.12) 0%,rgba(200,169,106,0.04) 50%,transparent 100%);
+  transform:rotate(-15deg);
+  filter:blur(40px);
+}
+/* Glow orb */
+.hero-bg::after{
+  content:'';
+  position:absolute;
+  top:15%;right:18%;
+  width:280px;height:280px;
+  background:radial-gradient(circle,rgba(200,169,106,0.18) 0%,transparent 70%);
+  filter:blur(30px);
+  border-radius:50%;
+}
+
+/* Glass nav */
+.glass-nav{
+  position:relative;
+  z-index:10;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:1.5rem 3.5rem;
+  backdrop-filter:blur(24px) saturate(1.4);
+  -webkit-backdrop-filter:blur(24px) saturate(1.4);
+  background:rgba(10,15,12,0.3);
+  border-bottom:0.5px solid var(--glass-border);
+}
+.nav-socials{display:flex;gap:1.5rem}
+.nav-socials a,.nav-links-right a{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  text-decoration:none;
+  transition:color .2s;
+}
+.nav-socials a:hover,.nav-links-right a:hover{color:rgba(255,255,255,.85)}
+.nav-brand{
+  text-align:center;
+  font-size:.82rem;
+  font-weight:200;
+  letter-spacing:.55em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.9);
+  text-decoration:none;
+}
+.nav-links-right{
+  display:flex;gap:2rem;
+  justify-content:flex-end;
+  align-items:center;
+}
+.nav-links-right .subscribe-btn{
+  font-size:.58rem;
+  font-weight:300;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink);
+  background:rgba(255,255,255,.9);
+  text-decoration:none;
+  padding:7px 18px;
+  border-radius:1px;
+  transition:background .2s;
+}
+.nav-links-right .subscribe-btn:hover{background:#fff}
+
+/* Subnav */
+.glass-subnav{
+  position:relative;z-index:10;
+  display:flex;justify-content:center;gap:3.5rem;
+  padding:.9rem 3.5rem;
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  background:rgba(10,15,12,0.2);
+  border-bottom:0.5px solid rgba(255,255,255,.08);
+}
+.glass-subnav a{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+  text-decoration:none;
+  transition:color .2s;
+  padding-bottom:2px;
+  border-bottom:0.5px solid transparent;
+}
+.glass-subnav a:hover{color:rgba(255,255,255,.85);border-bottom-color:rgba(255,255,255,.2)}
+
+/* Hero content */
+.hero-body{
+  position:relative;z-index:5;
+  flex:1;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:0;
+  padding:3rem 3.5rem 3rem;
+  align-items:end;
+}
+.hero-main{}
+.hero-issue{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:.75rem;
+  display:flex;align-items:center;gap:.75rem;
+}
+.hero-issue::before{content:'';display:block;width:32px;height:.5px;background:var(--gold)}
+.hero-h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.5rem,6vw,6rem);
+  font-weight:300;
+  font-style:italic;
+  line-height:1.05;
+  color:#fff;
+  margin-bottom:.75rem;
+  letter-spacing:-.01em;
+}
+.hero-sub{
+  font-size:.72rem;
+  font-weight:200;
+  letter-spacing:.16em;
+  color:rgba(255,255,255,.5);
+  line-height:1.7;
+  max-width:380px;
+  margin-bottom:1.25rem;
+  text-transform:uppercase;
+}
+.hero-cta{
+  display:inline-flex;
+  align-items:center;gap:.75rem;
+  font-size:.6rem;
+  font-weight:300;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#fff;
+  text-decoration:none;
+  padding:13px 28px;
+  border:0.5px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(12px);
+  background:var(--glass);
+  border-radius:1px;
+  transition:background .25s,border-color .25s;
+}
+.hero-cta:hover{background:var(--glass-heavy);border-color:rgba(255,255,255,.45)}
+
+/* Glass sidebar card */
+.hero-sidebar{
+  backdrop-filter:blur(28px) saturate(1.6);
+  -webkit-backdrop-filter:blur(28px) saturate(1.6);
+  background:var(--glass);
+  border:0.5px solid var(--glass-border);
+  border-radius:4px;
+  padding:1.5rem;
+  align-self:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero-sidebar::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--glass-shine),transparent);
+}
+.sidebar-eyebrow{
+  font-size:.55rem;
+  font-weight:200;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:.85rem;
+}
+.sidebar-item{
+  padding:.65rem 0;
+  border-bottom:0.5px solid rgba(255,255,255,.08);
+  cursor:pointer;
+}
+.sidebar-item:last-child{border-bottom:none;padding-bottom:0}
+.sidebar-item:hover .sidebar-item-title{color:var(--gold2)}
+.sidebar-cat{
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-bottom:.2rem;
+}
+.sidebar-item-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;
+  font-weight:300;
+  color:rgba(255,255,255,.85);
+  line-height:1.35;
+  transition:color .2s;
+}
+
+/* ── PRODUCT STRIP ── */
+.products-wrap{
+  background:#080C09;
+  padding:0;
+}
+.products-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:2.5rem 3.5rem 2rem;
+  border-bottom:0.5px solid rgba(255,255,255,.07);
+}
+.section-eyebrow{
+  font-size:.6rem;
+  font-weight:200;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+}
+.section-link{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  text-decoration:none;
+  transition:color .2s;
+}
+.section-link:hover{color:var(--gold2)}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:0.5px solid rgba(255,255,255,.07);
+}
+.product-card{
+  border-right:0.5px solid rgba(255,255,255,.07);
+  cursor:pointer;
+  transition:background .25s;
+  position:relative;
+  overflow:hidden;
+}
+.product-card:last-child{border-right:none}
+.product-card:hover{background:rgba(255,255,255,.03)}
+.product-card:hover .product-img-inner{transform:scale(1.03)}
+
+/* Glass product image area */
+.product-img-wrap{
+  aspect-ratio:3/4;
+  position:relative;
+  overflow:hidden;
+}
+/* Each card has its own rich gradient "photo" */
+.pg1{background:linear-gradient(160deg,#1A3A28 0%,#0D2018 50%,#081510 100%)}
+.pg2{background:linear-gradient(160deg,#2A2818 0%,#1A1A0E 50%,#0E0E08 100%)}
+.pg3{background:linear-gradient(160deg,#1E2830 0%,#101820 50%,#080E14 100%)}
+.pg4{background:linear-gradient(160deg,#281C2A 0%,#180E1A 50%,#0E0810 100%)}
+.product-img-inner{
+  position:absolute;inset:0;
+  transition:transform .5s ease;
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:.75rem;
+}
+/* Glassy orb in each product */
+.product-orb{
+  width:90px;height:90px;
+  border-radius:50%;
+  backdrop-filter:blur(8px);
+  border:0.5px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.product-orb::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:50%;
+  background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,transparent 100%);
+  border-radius:50% 50% 0 0;
+}
+.orb1{background:radial-gradient(circle at 35% 30%,rgba(100,180,120,.35),rgba(20,60,30,.5))}
+.orb2{background:radial-gradient(circle at 35% 30%,rgba(200,169,106,.35),rgba(60,50,20,.5))}
+.orb3{background:radial-gradient(circle at 35% 30%,rgba(100,150,200,.35),rgba(20,40,60,.5))}
+.orb4{background:radial-gradient(circle at 35% 30%,rgba(180,100,200,.25),rgba(50,20,60,.5))}
+.product-img-label{
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  text-align:center;
+  padding:0 1rem;
+}
+.product-img-name{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:.95rem;
+  font-weight:300;
+  color:rgba(255,255,255,.35);
+  text-align:center;
+  padding:0 1.25rem;
+  line-height:1.3;
+}
+/* Glass badge */
+.product-badge{
+  position:absolute;top:14px;left:14px;
+  font-size:.5rem;
+  font-weight:300;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.7);
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.1);
+  border:0.5px solid rgba(255,255,255,.15);
+  padding:4px 10px;
+  border-radius:1px;
+}
+.product-info{
+  padding:1.5rem 1.75rem;
+  border-top:0.5px solid rgba(255,255,255,.07);
+}
+.product-type{
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:.4rem;
+}
+.product-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;
+  font-weight:400;
+  color:rgba(255,255,255,.85);
+  line-height:1.3;
+  margin-bottom:.35rem;
+}
+.product-price{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.16em;
+  color:rgba(255,255,255,.35);
+}
+.product-price a{
+  color:rgba(255,255,255,.35);
+  text-decoration:none;
+  transition:color .2s;
+}
+.product-price a:hover{color:var(--gold)}
+
+/* ── EDITORIAL QUOTE ── */
+.quote-wrap{
+  background:#080C09;
+  padding:6rem 3.5rem;
+  text-align:center;
+  border-top:0.5px solid rgba(255,255,255,.06);
+  border-bottom:0.5px solid rgba(255,255,255,.06);
+  position:relative;
+  overflow:hidden;
+}
+.quote-wrap::before{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:300px;
+  background:radial-gradient(ellipse,rgba(200,169,106,0.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+.quote-text{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:clamp(1.5rem,2.5vw,2.25rem);
+  font-weight:300;
+  color:rgba(255,255,255,.75);
+  max-width:680px;
+  margin:0 auto 1.5rem;
+  line-height:1.5;
+}
+.quote-cite{
+  font-size:.55rem;
+  font-weight:200;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+
+/* ── ARTICLE GRID ── */
+.articles-wrap{
+  background:#080C09;
+  padding:0 3.5rem 5rem;
+}
+.articles-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:2.5rem 0 2rem;
+  border-bottom:0.5px solid rgba(255,255,255,.07);
+  margin-bottom:2.5rem;
+}
+.article-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2.5rem;
+}
+.article-card{cursor:pointer}
+.article-card:hover .a-title{color:var(--gold)}
+.a-img{
+  aspect-ratio:4/3;
+  border-radius:3px;
+  margin-bottom:1.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.ai1{background:linear-gradient(145deg,#1C3528 0%,#0D1F18 100%)}
+.ai2{background:linear-gradient(145deg,#2A2010 0%,#180E06 100%)}
+.ai3{background:linear-gradient(145deg,#12202C 0%,#08101A 100%)}
+.a-img-shine{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.06) 0%,transparent 50%);
+}
+.a-cat{
+  font-size:.55rem;
+  font-weight:200;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:.6rem;
+}
+.a-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;
+  font-weight:400;
+  color:rgba(255,255,255,.85);
+  line-height:1.3;
+  margin-bottom:.6rem;
+  transition:color .2s;
+}
+.a-excerpt{
+  font-size:.72rem;
+  font-weight:200;
+  letter-spacing:.06em;
+  color:rgba(255,255,255,.35);
+  line-height:1.8;
+  margin-bottom:.75rem;
+}
+.a-meta{
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.18);
+}
+
+/* ── NEWSLETTER ── */
+.newsletter{
+  position:relative;
+  overflow:hidden;
+  padding:7rem 3.5rem;
+}
+.nl-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 100% at 50% 50%,rgba(26,55,38,0.7) 0%,transparent 65%),
+    radial-gradient(ellipse 60% 80% at 20% 80%,rgba(12,25,18,0.8) 0%,transparent 60%),
+    linear-gradient(160deg,#0D1810 0%,#080D08 100%);
+}
+.nl-bg::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(200,169,106,0.07) 0%,transparent 70%);
+}
+.nl-inner{
+  position:relative;z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:center;
+}
+.nl-left-eyebrow{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.5rem;
+}
+.nl-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:clamp(2rem,3vw,3rem);
+  font-weight:300;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:1rem;
+}
+.nl-body{
+  font-size:.68rem;
+  font-weight:200;
+  letter-spacing:.1em;
+  color:rgba(255,255,255,.4);
+  line-height:1.9;
+}
+
+/* Glass form */
+.nl-form-wrap{
+  backdrop-filter:blur(24px) saturate(1.4);
+  -webkit-backdrop-filter:blur(24px) saturate(1.4);
+  background:var(--glass);
+  border:0.5px solid var(--glass-border);
+  border-radius:4px;
+  padding:2.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.nl-form-wrap::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+}
+.nl-input{
+  width:100%;
+  padding:12px 0;
+  background:transparent;
+  border:none;
+  border-bottom:0.5px solid rgba(255,255,255,.12);
+  color:#fff;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.72rem;
+  font-weight:200;
+  letter-spacing:.12em;
+  outline:none;
+  margin-bottom:1rem;
+  transition:border-color .2s;
+}
+.nl-input::placeholder{color:rgba(255,255,255,.25);letter-spacing:.12em}
+.nl-input:focus{border-bottom-color:rgba(255,255,255,.35)}
+.nl-btn{
+  width:100%;
+  margin-top:.5rem;
+  padding:13px;
+  background:rgba(255,255,255,.1);
+  border:0.5px solid rgba(255,255,255,.2);
+  color:#fff;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.6rem;
+  font-weight:300;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  cursor:pointer;
+  border-radius:1px;
+  transition:background .2s,border-color .2s;
+}
+.nl-btn:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35)}
+.nl-fine{
+  margin-top:1rem;
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.18);
+  text-align:center;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:#050806;
+  padding:3rem 3.5rem 2rem;
+  border-top:0.5px solid rgba(255,255,255,.06);
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:2rem;
+  align-items:start;
+  padding-bottom:2rem;
+  border-bottom:0.5px solid rgba(255,255,255,.05);
+  margin-bottom:1.75rem;
+}
+.footer-links{display:flex;flex-direction:column;gap:.75rem}
+.footer-links a{
+  font-size:.58rem;
+  font-weight:200;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.25);
+  text-decoration:none;
+  transition:color .2s;
+}
+.footer-links a:hover{color:rgba(255,255,255,.6)}
+.footer-links-right{align-items:flex-end}
+.footer-mid{text-align:center}
+.footer-logo{
+  display:block;
+  font-size:.78rem;
+  font-weight:200;
+  letter-spacing:.55em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.6);
+  margin-bottom:.75rem;
+}
+.footer-tagline{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:.95rem;
+  font-weight:300;
+  color:rgba(255,255,255,.2);
+}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:2rem;
+}
+.footer-copy{
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.15);
+}
+.footer-disc{
+  font-size:.52rem;
+  font-weight:200;
+  letter-spacing:.08em;
+  color:rgba(255,255,255,.15);
+  max-width:460px;
+  text-align:right;
+  line-height:1.8;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .glass-nav{padding:1.25rem 1.5rem;grid-template-columns:auto 1fr}
+  .nav-socials{display:none}
+  .glass-subnav{gap:1.5rem;flex-wrap:wrap;padding:.75rem 1.5rem}
+  .hero-body{grid-template-columns:1fr;padding:3rem 1.5rem}
+  .hero-sidebar{display:none}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .products-top,.articles-top,.articles-wrap,.products-wrap .products-top{padding-left:1.5rem;padding-right:1.5rem}
+  .articles-wrap{padding-left:1.5rem;padding-right:1.5rem;padding-bottom:3rem}
+  .article-grid{grid-template-columns:1fr;gap:2rem}
+  .nl-inner{grid-template-columns:1fr;gap:2.5rem}
+  .newsletter{padding:4rem 1.5rem}
+  .footer-top{grid-template-columns:1fr;text-align:center}
+  .footer-links-right{align-items:center}
+  .footer-bottom{flex-direction:column;gap:.75rem}
+  .footer-disc{text-align:left}
+  .quote-wrap{padding:4rem 1.5rem}
+}
+
+/* ── FADE ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+<div style="position:absolute;inset:0;z-index:0;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=1920&q=90"
+    style="width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.38;display:block" alt="botanical herbs" />
+</div>
+
+  <!-- Glass Nav -->
+  <div class="glass-nav">
+    <div class="nav-socials">
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+      <a href="#">X</a>
+    </div>
+    <a href="index.html" class="nav-brand">The Creative Well</a>
+    <div class="nav-links-right">
+      <a href="#articles">Magazine</a>
+      <a href="#products">Shop</a>
+      <a href="#newsletter" class="subscribe-btn">Subscribe Free</a>
+    </div>
+  </div>
+
+  <!-- Subnav -->
+  <div class="glass-subnav">
+    <a href="#articles">Magazine</a>
+    <a href="article-five-minute-morning.html">Journal</a>
+    <a href="#products">Shop</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- Hero Body -->
+  <div class="hero-body">
+    <div class="hero-main">
+      <div class="hero-issue">Issue 01 &nbsp;·&nbsp; Health &amp; Wellness</div>
+      <h1 class="hero-h1">Your Body<br>Is Your<br>Business.</h1>
+      <p class="hero-sub">Wellness, wealth &amp; creative energy<br>for the Creative Sovereign who plays the long game.</p>
+      <a href="#articles" class="hero-cta">Read the Issue &nbsp;→</a>
+    </div>
+    <aside class="hero-sidebar">
+      <div class="sidebar-eyebrow">Also in this issue</div>
+      <div class="sidebar-item">
+        <div class="sidebar-cat">Habits</div>
+        <div class="sidebar-item-title">The five-minute morning that clears creative block every day</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-cat">Income</div>
+        <div class="sidebar-item-title">How to earn your first $100 without losing a single weekend</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-cat">Tools</div>
+        <div class="sidebar-item-title">The AI stack running my content on 30 minutes a day</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+
+<div class="editorial-header reveal">
+  <span class="ed-pre">Curated for the Sovereign</span>
+  <h2 class="ed-heading">The Shop</h2>
+  <div class="ed-rule"></div>
+  <span class="ed-post">Wellness &middot; Supplements &middot; Tools</span>
+</div>
+<div class="products-wrap" id="products">
+  <div class="products-top reveal">
+    <span class="section-eyebrow">From the Shop</span>
+    <a href="#products" class="section-link">View All →</a>
+  </div>
+  <div class="product-grid reveal">
+
+    <div class="product-card">
+      <div class="product-img-wrap pg1" style="position:relative"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="herbs botanicals" />
+        <div class="product-img-inner">
+          <div class="product-orb orb1"></div>
+          <div class="product-img-name">Wellness Workbook</div>
+        </div>
+        <div class="product-badge">Digital</div>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Digital Download</div>
+        <div class="product-name">The Wellness Workbook</div>
+        <div class="product-price">$9.00 &nbsp;→</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap pg2" style="position:relative"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="wellness journal" />
+        <div class="product-img-inner">
+          <div class="product-orb orb2"></div>
+          <div class="product-img-name">Five Minute Journal</div>
+        </div>
+        <div class="product-badge">Affiliate Pick</div>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Recommended · Amazon</div>
+        <div class="product-name">The Five Minute Journal</div>
+        <div class="product-price">
+          <!-- TODO: replace YOUR_AFFILIATE_LINK_1_HERE with full Amazon URL using tag=thecreati067b-20 -->
+          <a href="YOUR_AFFILIATE_LINK_1_HERE" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap pg3" style="position:relative"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="natural supplements" />
+        <div class="product-img-inner">
+          <div class="product-orb orb3"></div>
+          <div class="product-img-name">Magnesium Glycinate</div>
+        </div>
+        <div class="product-badge">Affiliate Pick</div>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Recommended · Amazon</div>
+        <div class="product-name">Magnesium Glycinate</div>
+        <div class="product-price">
+          <!-- TODO: replace YOUR_AFFILIATE_LINK_2_HERE with full Amazon URL using tag=thecreati067b-20 -->
+          <a href="YOUR_AFFILIATE_LINK_2_HERE" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap pg4" style="position:relative"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="botanical plant" />
+        <div class="product-img-inner">
+          <div class="product-orb orb4"></div>
+          <div class="product-img-name">Your Product Here</div>
+        </div>
+        <div class="product-badge">Coming Soon</div>
+      </div>
+      <div class="product-info">
+        <div class="product-type">Add Your Affiliate Pick</div>
+        <div class="product-name">Real-World Product</div>
+        <div class="product-price">Your Price →</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- QUOTE -->
+<div class="quote-wrap reveal">
+  <div class="quote-text">"The Creative Sovereign who lasts is not the one who outworks everyone — it is the one who figured out how to keep the well from running dry."</div>
+  <div class="quote-cite">The Creative Well &nbsp;·&nbsp; Issue 01</div>
+</div>
+
+<!-- ARTICLES -->
+
+<div class="editorial-header reveal">
+  <span class="ed-pre">Volume I &middot; Issue 01</span>
+  <h2 class="ed-heading">The Magazine</h2>
+  <div class="ed-rule"></div>
+  <span class="ed-post">Health &middot; Cognition &middot; Income</span>
+</div>
+<div class="articles-wrap" id="articles">
+  <div class="articles-top reveal">
+    <span class="section-eyebrow">Magazine</span>
+    <a href="#articles" class="section-link">All Articles →</a>
+  </div>
+  <div class="article-grid reveal">
+    <div class="article-card" onclick="window.location='article-five-minute-morning.html'" style="cursor:pointer">
+      <div class="a-img ai1" style="position:relative"><img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="wellness herbs" /><div class="a-img-shine"></div></div>
+      <div class="a-cat">Habits · Wellness</div>
+      <div class="a-title" style="cursor:pointer" onclick="window.location='article-five-minute-morning.html'">The Five-Minute Morning That Clears Creative Block</div>
+      <p class="a-excerpt">Before the phone, before the inbox, before the metrics. What protecting the first five minutes of your day actually does to your creative output and everything that follows.</p>
+      <div class="a-meta">7 min read &nbsp;·&nbsp; Issue 01 &nbsp;·&nbsp; Read now →</div>
+    </div>
+    <div class="article-card">
+      <div class="a-img ai2" style="position:relative"><img src="https://images.unsplash.com/photo-1542736705-53f0131d1e98?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="adaptogens" /><div class="a-img-shine"></div></div>
+      <div class="a-cat">Income</div>
+      <div class="a-title">Affiliate Links That Earn Without Making Readers Feel Sold To</div>
+      <p class="a-excerpt">Natural recommendations that convert. The fine line between trust and noise — and how to stay on the right side of it permanently.</p>
+      <div class="a-meta">5 min read &nbsp;·&nbsp; Issue 01</div>
+    </div>
+    <div class="article-card">
+      <div class="a-img ai3" style="position:relative"><img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=85" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;display:block" alt="brain cognition" /><div class="a-img-shine"></div></div>
+      <div class="a-cat">Productivity</div>
+      <div class="a-title">The 20-Minute Morning That Changed What I Earn</div>
+      <p class="a-excerpt">Before the phone, before the inbox, before the metrics. What protecting your first window actually does to your creative output.</p>
+      <div class="a-meta">6 min read &nbsp;·&nbsp; Issue 01</div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+
+<div class="editorial-header editorial-header--right reveal">
+  <span class="ed-pre">Join the</span>
+  <h2 class="ed-heading">Inner Circle</h2>
+  <div class="ed-rule"></div>
+  <span class="ed-post">Free &middot; Weekly &middot; Always independent</span>
+</div>
+<section class="newsletter reveal" id="newsletter">
+  <div class="nl-bg"></div>
+<div style="position:absolute;inset:0;z-index:0;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1920&q=85"
+    style="width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.2;display:block" alt="wellness botanical" />
+</div>
+  <div class="nl-inner">
+    <div>
+      <div class="nl-left-eyebrow">Free Weekly Issue</div>
+      <div class="nl-heading">The Creative Well, delivered every week.</div>
+      <p class="nl-body">Wellness habits, income strategies, and creative energy for the Creative Sovereign playing the long game. No noise. Always free. Unsubscribe anytime.</p>
+    </div>
+    <div class="nl-form-wrap">
+      <form onsubmit="handleSub(event)">
+        <input class="nl-input" type="text" placeholder="Your name" />
+        <input class="nl-input" type="email" placeholder="Email address" required />
+        <button class="nl-btn" type="submit" id="nl-btn">Subscribe Free →</button>
+        <p class="nl-fine">No spam · Unsubscribe anytime · Always free</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-links">
+      <a href="#articles">Magazine</a>
+      <a href="article-five-minute-morning.html">Journal</a>
+      <a href="#products">Shop</a>
+    </div>
+    <div class="footer-mid">
+      <span class="footer-logo">The Creative Well</span>
+      <span class="footer-tagline">Wellness &amp; wealth for the Creative Sovereign.</span>
+    </div>
+    <div class="footer-links footer-links-right">
+      <a href="#newsletter">Newsletter</a>
+      <a href="about.html">About</a>
+      <a href="mailto:blisteringvictory@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 The Creative Well · All rights reserved · <a href="privacy-policy-final.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
+    <span class="footer-disc">Affiliate disclosure: Some links on this site are affiliate links. Purchasing through them may earn a small commission at no extra cost to you. Only products genuinely believed in are recommended here.</span>
+  </div>
+</footer>
+
+<script>
+function handleSub(e){
+  e.preventDefault();
+  const btn=document.getElementById('nl-btn');
+  btn.textContent='You\'re in →';
+  btn.style.background='rgba(200,169,106,0.15)';
+  btn.style.borderColor='rgba(200,169,106,0.3)';
+  setTimeout(()=>{
+    btn.textContent='Subscribe Free →';
+    btn.style.background='';
+    btn.style.borderColor='';
+  },4000);
+}
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+  });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
